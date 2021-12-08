@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  background:white;
+}
+.boardname{
+
+    position: absolute;
+    z-index: 9;
+    color: black;
+    font-size: 50px;
+    top: 120vh;
+    text-align: center;
+    width: 100%;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://2.bp.blogspot.com/-R-T9z4XhCFE/W87EN1hyorI/AAAAAAAAPYU/Df9oBQv2hvwPvwC8zOMagzJPwkNG5w7EwCLcBGAs/s1600/back-desktop%25401x.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#header-front
+{
+  top: 25.3125vw;
+    left: calc(52.65% - 65.98958333333333vw / 2);
+    width: 65.98958vw;
+    position: absolute;
+    z-index: 3;
+    height: auto;
+}
+
+#header-stones
+{
+    position: absolute;
+    top: 35.08333vw;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+section {
+  width: 100%;
+  height: 1000px;
+}
+
+/* 일시정지, 재생 버튼 */
+video::-webkit-media-controls-play-button {display:none}
+
+/* 재생 슬라이드..? */
+video::-webkit-media-controls-timeline {display:none}
+
+/* 현재 진행 시간 */
+video::-webkit-media-controls-current-time-display{display:none}
+
+/* 전체 시간 */
+video::-webkit-media-controls-time-remaining-display {display:none}
+
+/* 음소거 버튼 */
+video::-webkit-media-controls-mute-button {display:none}
+
+/* 볼륨 조절 슬라이드 */
+video::-webkit-media-controls-volume-slider {display:none}
+
+/* 괄호에 display: none !important; 를 추가하면된다.
+예 ) 전체화면 전환 버튼을 숨긴다. 다만 더블클릭으로 전체화면이 되는 기능등은 그대로고 단지 버튼만 없앤다. */
+video::-webkit-media-controls-fullscreen-button { display: none !important;}
+
+
+video{
+  padding-top: 30;
+  margin-top: 20;
+}
+
+a{
+  text-decoration: none;
+  color:#404040;
+  }
+li{
+  list-style: none;
+  }
+
+#menu1{
+    background-color: inherit;
+    font-weight: bold;
+    font-style: "arial black",sans-serif;
+}
+#menu1{
+  width: 500px;
+  margin-left: 1300px;
+  overflow: hidden;
+}
+
+#menu1 ul li{
+  float:left;
+  width: 25%;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  background-color: inherit;
+}
+
+#menu1 ul li a{
+  display: block;
+}
+#menu1 ul li a:hover{
+  background: #000000;
+  color:#fff;
+  text-decoration: underline;
+}

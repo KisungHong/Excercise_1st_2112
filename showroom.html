@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+			<link rel="stylesheet" href="style2.css">
+	<title>홍기성의 신차 알아보기_캐스퍼</title>
+	</head>
+	<body>
+		<br>
+		<div id="menu1">
+			<ul>
+				<li><a href="index.html">Introduce</a></li>
+				<li><a href="#">Spec</a></li>
+				<li><a href="#">Price</a></li>
+				<li><a href="showroom.html">Showroom</a></li>
+			</ul>
+		</div>
+<header>
+  <div class="inner"></div>
+	<p>casper</p>
+</header>
+<section>
+  <img id="header-stones" src="https://4.bp.blogspot.com/-KXFN5VqNsaA/W87Dl_Yp7YI/AAAAAAAAPYI/1Z7qSrHg6Hks6agjqTW1fls0aUinJXXzACLcBGAs/s1600/stones.png" alt="Stones in the background">
+  <img id="header-front" src="https://3.bp.blogspot.com/--DQy6E0J_Q8/W87Dy-VOMvI/AAAAAAAAPYM/9aj6WEfjHRMLV8J_L_bysCur6bA0CoL0gCLcBGAs/s1600/fireplace.png"></div>
+
+
+</section>
+
+
+<div class="boardname">
+  <div class="col-md-12">
+    <p><h1>Casper Showroom</h1></p>
+		<br>
+		<div class="sa sa-up"><img src="white.png" width="65%"></div>
+		<video width="100%" height="auto" autoplay loop muted controls>
+			<source src="https://casper.hyundai.com/wcontents/video/clip_01.mp4" type="video/mp4">
+	</video>
+	<div class="sa sa-up"><img src="casper4.jpg" width="100%"></div>
+	<video width="100%" height="auto" autoplay loop muted controls>
+		<source src="https://casper.hyundai.com/wcontents/video/clip_02.mp4" type="video/mp4">
+</video>
+  </div>
+</div>
+
+
+<script>
+	const inner = document.querySelector(".inner");
+	const section = document.querySelector("section");
+
+	window.onscroll = function() {
+		let value = window.pageYOffset / section.offsetTop + 1;
+		inner.style.transform = `scale(${value})`;
+	};
+
+
+	$(function(){
+
+		var $window = $(window);		//Window object
+
+		var scrollTime = 1.2;			//Scroll time
+		var scrollDistance = 170;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
+
+		$window.on("mousewheel DOMMouseScroll", function(event){
+
+			event.preventDefault();
+
+			var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+			var scrollTop = $window.scrollTop();
+			var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+
+			TweenMax.to($window, scrollTime, {
+				scrollTo : { y: finalScroll, autoKill:true },
+					ease: Power1.easeOut,	//For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
+					autoKill: true,
+					overwrite: 5
+				});
+
+		});
+
+	});
+
+</script>
+</body>
+</html>

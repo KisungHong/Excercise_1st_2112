@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Hi+Melody&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -14,10 +15,10 @@
       <h1>&nbsp;&nbsp;CASPER</h1>
       <div id="menu1">
         <ul>
-          <li><a href="#">Introduce</a></li>
+          <li><a href="index.html">Introduce</a></li>
           <li><a href="#">Spec</a></li>
           <li><a href="#">Price</a></li>
-          <li><a href="#">Showroom</a></li>
+          <li><a href="showroom.html">Showroom</a></li>
         </ul>
       </div>
 
@@ -33,5 +34,43 @@
     <video width="100%" height="auto" autoplay loop muted controls>
       <source src="https://casper.hyundai.com/wcontents/video/highlight/PC/highlight_intro.mp4" type="video/mp4">
   </video>
+
+  <section>
+    <header>
+    <h2><div class="main">강인하고 <br>아이코닉한 SUV</div></h2>
+    <div class="sa sa-up"><img src="casper1.png" width="50%" style="float:right"></div>
+  </header>
+  </section>
+
+
+
+  <section>
+      <div class="backgroud-wrap"><img src="casper3.jpg" width="100%"></div>
+      <p><div class="content"><div class="sub1">젊고 역동적인 감성의 SUV디자인,
+      <div class="content"><div class="sub2">당당하고 견고한 외관 디자인으로 캐스퍼만의 존재감을 드러냅니다.</div></p>
+  </section>
+
+
+
+
+
+<script>
+  // Scroll Animation (sa, 스크롤 애니메이션)
+  const saTriggerMargin = 300;
+  const saElementList = document.querySelectorAll('.sa');
+
+  const saFunc = function() {
+    for (const element of saElementList) {
+      if (!element.classList.contains('show')) {
+        if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
+          element.classList.add('show');
+        }
+      }
+    }
+  }
+
+  window.addEventListener('load', saFunc);
+  window.addEventListener('scroll', saFunc);
+</script>
   </body>
 </html>

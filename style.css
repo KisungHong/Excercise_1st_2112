@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Hi+Melody&display=swap');
 #regular{
   font-family: 'Hi Melody', cursive;
   text-align: left;
@@ -18,6 +19,15 @@ H1 {
     display: block;
     float:left;
     }
+H2 {
+    font-size: 70px;
+    text-align: left;
+    margin-top:0;
+    font-weight: bold;
+    display: block;
+    float:left;
+    }
+
 
 /* 목차 꾸미기 */
 
@@ -58,8 +68,9 @@ li{
   text-decoration: underline;
 }
 
+/* hover시에 font size 커지는 것도 생각해보자 */
 
-}
+
 /* style.css */ /* 숨기려는 버튼을 골라서 쓰자 */
 /* 전체화면 버튼 */
 /* video::-webkit-media-controls-fullscreen-button {} */
@@ -90,4 +101,113 @@ video::-webkit-media-controls-fullscreen-button { display: none !important;}
 video{
   padding-top: 30;
   margin-top: 20;
+}
+
+.background-wrap {
+  background-size: 272px 196px;
+  width: 272px;
+  height: 196px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content span {
+  color: white;
+}
+
+.content span:nth-child(1) {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.content span:nth-child(2) {
+  font-size: 20px;
+}
+
+
+.main{
+  font-size: 100px;
+  font-weight: 400;
+  font-family: 'East Sea Dokdo', cursive;
+}
+.sub1{
+  font-size: 70px;
+  font-family: 'East Sea Dokdo', cursive;
+  color: black;
+}
+.sub2{
+  font-size: 40px;
+  font-family: 'East Sea Dokdo', cursive;
+  color:black;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0px; }
+main { padding: 100px;
+       border: 800px;
+       border-top: 800px;
+      }
+header {
+  background-color: white;
+  height: 100px;
+  padding: 100px;
+}
+section {
+  display: block;
+  justify-content: center;
+
+}
+section div {
+  width: 100%;
+  height: 300px;
+}
+
+/* Scroll Animation (sa, 스크롤 애니메이션) */
+.sa {
+  opacity: 0;
+  transition: all .6s ease;
+}
+
+/* 아래에서 위로 페이드 인 */
+.sa-up {
+  transform: translate(0, 100px);
+}
+/* 위에서 아래로 페이드 인 */
+.sa-down {
+  transform: translate(0, -100px);
+}
+/* 왼쪽에서 오른쪽으로 페이드 인 */
+.sa-right {
+  transform: translate(-100px, 0);
+}
+/* 오른쪽에서 왼쪽으로 페이드 인 */
+.sa-left {
+  transform: translate(100px, 0);
+}
+/* 왼쪽으로 회전하면서 페이드 인 */
+.sa-rotateL {
+  transform: rotate(180deg);
+}
+/* 오른쪽으로 회전하면서 페이드 인 */
+.sa-rotateR {
+  transform: rotate(-180deg);
+}
+/* 작아진 상태에서 커지면서 페이드 인 */
+.sa-scaleUp {
+  transform: scale(.5);
+}
+/* 커진 상태에서 작아지면서 페이드 인 */
+.sa-scaleDown {
+  transform: scale(1.5);
+}
+
+.sa.show {
+  opacity: 1;
+  transform: none;
 }
